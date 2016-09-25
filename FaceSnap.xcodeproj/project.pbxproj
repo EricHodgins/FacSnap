@@ -13,6 +13,7 @@
 		7A8F4AC11D973CD100280A65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A8F4ABF1D973CD100280A65 /* LaunchScreen.storyboard */; };
 		7A8F4ACC1D973CD100280A65 /* FaceSnapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F4ACB1D973CD100280A65 /* FaceSnapTests.swift */; };
 		7A8F4AD71D97426B00280A65 /* MediaPickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F4AD61D97426B00280A65 /* MediaPickerManager.swift */; };
+		7A94C16E1D98596C0041E7C5 /* PhotoFilterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A94C16D1D98596C0041E7C5 /* PhotoFilterController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		7A8F4ACB1D973CD100280A65 /* FaceSnapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceSnapTests.swift; sourceTree = "<group>"; };
 		7A8F4ACD1D973CD100280A65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A8F4AD61D97426B00280A65 /* MediaPickerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPickerManager.swift; sourceTree = "<group>"; };
+		7A94C16D1D98596C0041E7C5 /* PhotoFilterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoFilterController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +79,11 @@
 		7A8F4AB51D973CD100280A65 /* FaceSnap */ = {
 			isa = PBXGroup;
 			children = (
+				7A94C16C1D98591D0041E7C5 /* Model */,
+				7A94C16B1D9859160041E7C5 /* View */,
+				7A94C16A1D9859090041E7C5 /* Controller */,
+				7A94C1691D9858F70041E7C5 /* Helpers */,
 				7A8F4AB61D973CD100280A65 /* AppDelegate.swift */,
-				7A8F4AD61D97426B00280A65 /* MediaPickerManager.swift */,
-				7A8F4AB81D973CD100280A65 /* PhotoListController.swift */,
 				7A8F4ABD1D973CD100280A65 /* Assets.xcassets */,
 				7A8F4ABF1D973CD100280A65 /* LaunchScreen.storyboard */,
 				7A8F4AC21D973CD100280A65 /* Info.plist */,
@@ -94,6 +98,37 @@
 				7A8F4ACD1D973CD100280A65 /* Info.plist */,
 			);
 			path = FaceSnapTests;
+			sourceTree = "<group>";
+		};
+		7A94C1691D9858F70041E7C5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7A8F4AD61D97426B00280A65 /* MediaPickerManager.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		7A94C16A1D9859090041E7C5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7A8F4AB81D973CD100280A65 /* PhotoListController.swift */,
+				7A94C16D1D98596C0041E7C5 /* PhotoFilterController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		7A94C16B1D9859160041E7C5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7A94C16C1D98591D0041E7C5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +237,7 @@
 			files = (
 				7A8F4AD71D97426B00280A65 /* MediaPickerManager.swift in Sources */,
 				7A8F4AB91D973CD100280A65 /* PhotoListController.swift in Sources */,
+				7A94C16E1D98596C0041E7C5 /* PhotoFilterController.swift in Sources */,
 				7A8F4AB71D973CD100280A65 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
