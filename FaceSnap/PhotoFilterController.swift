@@ -54,6 +54,7 @@ class PhotoFilterController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
+    // This gets loaded when using storyboards
     required init?(coder aDecoder: NSCoder) {
         fatalError()
     }
