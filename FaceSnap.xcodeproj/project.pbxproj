@@ -15,6 +15,7 @@
 		7A8F4AD71D97426B00280A65 /* MediaPickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F4AD61D97426B00280A65 /* MediaPickerManager.swift */; };
 		7A94C16E1D98596C0041E7C5 /* PhotoFilterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A94C16D1D98596C0041E7C5 /* PhotoFilterController.swift */; };
 		7A94C1701D9860A60041E7C5 /* FilteredImageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A94C16F1D9860A60041E7C5 /* FilteredImageBuilder.swift */; };
+		7A94C1721D98B7DA0041E7C5 /* FilteredImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A94C1711D98B7DA0041E7C5 /* FilteredImageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		7A8F4AD61D97426B00280A65 /* MediaPickerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPickerManager.swift; sourceTree = "<group>"; };
 		7A94C16D1D98596C0041E7C5 /* PhotoFilterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoFilterController.swift; sourceTree = "<group>"; };
 		7A94C16F1D9860A60041E7C5 /* FilteredImageBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteredImageBuilder.swift; sourceTree = "<group>"; };
+		7A94C1711D98B7DA0041E7C5 /* FilteredImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteredImageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 		7A94C16B1D9859160041E7C5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7A94C1711D98B7DA0041E7C5 /* FilteredImageCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 			files = (
 				7A94C1701D9860A60041E7C5 /* FilteredImageBuilder.swift in Sources */,
 				7A8F4AD71D97426B00280A65 /* MediaPickerManager.swift in Sources */,
+				7A94C1721D98B7DA0041E7C5 /* FilteredImageCell.swift in Sources */,
 				7A8F4AB91D973CD100280A65 /* PhotoListController.swift in Sources */,
 				7A94C16E1D98596C0041E7C5 /* PhotoFilterController.swift in Sources */,
 				7A8F4AB71D973CD100280A65 /* AppDelegate.swift in Sources */,
