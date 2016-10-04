@@ -43,5 +43,7 @@
 	<string>Take pictures and edit them.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Choose a photo to edit.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Location is used as metadata for the selfie</string>
 </dict>
 </plist>

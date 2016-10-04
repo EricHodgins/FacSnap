@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7A3374DF1DA351960077D3E6 /* PhotoMetadataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3374DE1DA351960077D3E6 /* PhotoMetadataController.swift */; };
+		7A3374E11DA35F770077D3E6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3374E01DA35F770077D3E6 /* LocationManager.swift */; };
 		7A8F4AB71D973CD100280A65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F4AB61D973CD100280A65 /* AppDelegate.swift */; };
 		7A8F4AB91D973CD100280A65 /* PhotoListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F4AB81D973CD100280A65 /* PhotoListController.swift */; };
 		7A8F4ABE1D973CD100280A65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A8F4ABD1D973CD100280A65 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		7A3374DE1DA351960077D3E6 /* PhotoMetadataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoMetadataController.swift; sourceTree = "<group>"; };
+		7A3374E01DA35F770077D3E6 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		7A8F4AB31D973CD100280A65 /* FaceSnap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceSnap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A8F4AB61D973CD100280A65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A8F4AB81D973CD100280A65 /* PhotoListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			children = (
 				7A8F4AD61D97426B00280A65 /* MediaPickerManager.swift */,
 				7A94C16F1D9860A60041E7C5 /* FilteredImageBuilder.swift */,
+				7A3374E01DA35F770077D3E6 /* LocationManager.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				7A8F4AD71D97426B00280A65 /* MediaPickerManager.swift in Sources */,
 				7A94C1721D98B7DA0041E7C5 /* FilteredImageCell.swift in Sources */,
 				7A8F4AB91D973CD100280A65 /* PhotoListController.swift in Sources */,
+				7A3374E11DA35F770077D3E6 /* LocationManager.swift in Sources */,
 				7A94C16E1D98596C0041E7C5 /* PhotoFilterController.swift in Sources */,
 				7A3374DF1DA351960077D3E6 /* PhotoMetadataController.swift in Sources */,
 				7A8F4AB71D973CD100280A65 /* AppDelegate.swift in Sources */,
