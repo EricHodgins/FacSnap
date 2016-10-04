@@ -10,7 +10,12 @@ import UIKit
 
 class PhotoFilterController: UIViewController {
     
-    private var mainImage: UIImage
+    var mainImage: UIImage {
+        didSet {
+            photoImageView.image = mainImage
+        }
+    }
+    
     let context: CIContext
     let eaglContext: EAGLContext
     
@@ -35,10 +40,11 @@ class PhotoFilterController: UIViewController {
         flowLayout.itemSize = CGSize(width: 100, height: 100)
         
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: flowLayout)
-        collectionView.backgroundColor = UIColor.white
+        collectionView.backgroundColor = UIColor.black
         collectionView.register(FilteredImageCell.self, forCellWithReuseIdentifier: FilteredImageCell.reuseIdentifier)
         
         collectionView.dataSource = self
+        collectionView.delegate = self
         
         return collectionView
     }()
@@ -64,6 +70,11 @@ class PhotoFilterController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let cancelButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(PhotoFilterController.dismissPhotoFilterController))
+        navigationItem.leftBarButtonItem = cancelButton
+        
+        let nextButton = UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(PhotoFilterController.presentMetaDataController))
+        navigationItem.rightBarButtonItem = nextButton
     }
 
     // Layout Code
@@ -117,10 +128,30 @@ extension PhotoFilterController: UICollectionViewDataSource {
     }
 }
 
+// MARK: - UICollectionViewDelegate
 
+extension PhotoFilterController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let ciImage = filteredImages[indexPath.row]
+        
+        let cgImage = context.createCGImage(ciImage, from: ciImage.extent)!
+        mainImage = UIImage(cgImage: cgImage)
+    }
+}
 
+// MARK: - Navigation
 
-
+extension PhotoFilterController {
+    func dismissPhotoFilterController() {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func presentMetaDataController() {
+        let metadataController = PhotoMetadataController(photo: self.mainImage)
+        navigationController?.pushViewController(metadataController, animated: true)
+    }
+}
 
 
 

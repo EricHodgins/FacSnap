@@ -39,6 +39,10 @@ class FilteredImageCell: UICollectionViewCell {
 
 extension FilteredImageCell: GLKViewDelegate {
     func glkView(_ view: GLKView, drawIn rect: CGRect) {
-        ciContext.draw(image, in: rect, from: image.extent)
+        
+        let drawableRectSize = CGSize(width: glkView.drawableWidth, height: glkView.drawableHeight)
+        let drawableRect = CGRect(origin: CGPoint.zero, size: drawableRectSize)
+        
+        ciContext.draw(image, in: drawableRect, from: image.extent)
     }
 }
