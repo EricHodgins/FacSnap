@@ -13,6 +13,7 @@ class PhotoFilterController: UIViewController {
     var mainImage: UIImage {
         didSet {
             photoImageView.image = mainImage
+            //photoImageView.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI_2))
         }
     }
     
@@ -124,6 +125,9 @@ extension PhotoFilterController: UICollectionViewDataSource {
         cell.eaglContext = eaglContext
         cell.image = ciImage
         
+        //Rotate imageView
+        cell.contentView.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI_2))
+        
         return cell
     }
 }
@@ -136,7 +140,8 @@ extension PhotoFilterController: UICollectionViewDelegate {
         let ciImage = filteredImages[indexPath.row]
         
         let cgImage = context.createCGImage(ciImage, from: ciImage.extent)!
-        mainImage = UIImage(cgImage: cgImage)
+        //mainImage = UIImage(cgImage: cgImage)
+        mainImage = UIImage(cgImage: cgImage, scale: CGFloat(1.0), orientation: .right)
     }
 }
 

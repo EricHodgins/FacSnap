@@ -29,6 +29,13 @@ class PhotoMetadataController: UITableViewController {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
+    
+    lazy var imageViewHeight: CGFloat = {
+        let imgFactor = self.photoImageView.frame.size.height / self.photoImageView.frame.size.width // aspect ratio
+        let screenWidth = UIScreen.main.bounds.size.width
+        
+        return screenWidth * imgFactor
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,7 +80,18 @@ extension PhotoMetadataController {
     }
 }
 
+// MARK: - UITableViewDelegate 
 
+extension PhotoMetadataController {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch (indexPath.section, indexPath.row) {
+        case (0, 0):
+            return imageViewHeight
+        default:
+            return tableView.rowHeight
+        }
+    }
+}
 
 
 
