@@ -18,6 +18,9 @@
 		7A94C16E1D98596C0041E7C5 /* PhotoFilterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A94C16D1D98596C0041E7C5 /* PhotoFilterController.swift */; };
 		7A94C1701D9860A60041E7C5 /* FilteredImageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A94C16F1D9860A60041E7C5 /* FilteredImageBuilder.swift */; };
 		7A94C1721D98B7DA0041E7C5 /* FilteredImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A94C1711D98B7DA0041E7C5 /* FilteredImageCell.swift */; };
+		7A9F1A8D1DA614390013B0CC /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9F1A8C1DA614390013B0CC /* Photo.swift */; };
+		7A9F1A8F1DA614D20013B0CC /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9F1A8E1DA614D20013B0CC /* Tag.swift */; };
+		7A9F1A911DA614E90013B0CC /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9F1A901DA614E90013B0CC /* Location.swift */; };
 		7AC3C1D41DA4B3D200049917 /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC3C1D31DA4B3D200049917 /* CoreDataController.swift */; };
 		7AC3C1D71DA4B4A700049917 /* FaceSnap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7AC3C1D51DA4B4A700049917 /* FaceSnap.xcdatamodeld */; };
 /* End PBXBuildFile section */
@@ -48,6 +51,9 @@
 		7A94C16D1D98596C0041E7C5 /* PhotoFilterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoFilterController.swift; sourceTree = "<group>"; };
 		7A94C16F1D9860A60041E7C5 /* FilteredImageBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteredImageBuilder.swift; sourceTree = "<group>"; };
 		7A94C1711D98B7DA0041E7C5 /* FilteredImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteredImageCell.swift; sourceTree = "<group>"; };
+		7A9F1A8C1DA614390013B0CC /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		7A9F1A8E1DA614D20013B0CC /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		7A9F1A901DA614E90013B0CC /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		7AC3C1D31DA4B3D200049917 /* CoreDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 		7AC3C1D61DA4B4A700049917 /* FaceSnap.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FaceSnap.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,6 +151,9 @@
 			isa = PBXGroup;
 			children = (
 				7AC3C1D51DA4B4A700049917 /* FaceSnap.xcdatamodeld */,
+				7A9F1A8C1DA614390013B0CC /* Photo.swift */,
+				7A9F1A8E1DA614D20013B0CC /* Tag.swift */,
+				7A9F1A901DA614E90013B0CC /* Location.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -253,13 +262,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A9F1A8F1DA614D20013B0CC /* Tag.swift in Sources */,
 				7AC3C1D71DA4B4A700049917 /* FaceSnap.xcdatamodeld in Sources */,
 				7A94C1701D9860A60041E7C5 /* FilteredImageBuilder.swift in Sources */,
 				7A8F4AD71D97426B00280A65 /* MediaPickerManager.swift in Sources */,
 				7A94C1721D98B7DA0041E7C5 /* FilteredImageCell.swift in Sources */,
 				7A8F4AB91D973CD100280A65 /* PhotoListController.swift in Sources */,
+				7A9F1A911DA614E90013B0CC /* Location.swift in Sources */,
 				7A3374E11DA35F770077D3E6 /* LocationManager.swift in Sources */,
 				7AC3C1D41DA4B3D200049917 /* CoreDataController.swift in Sources */,
+				7A9F1A8D1DA614390013B0CC /* Photo.swift in Sources */,
 				7A94C16E1D98596C0041E7C5 /* PhotoFilterController.swift in Sources */,
 				7A3374DF1DA351960077D3E6 /* PhotoMetadataController.swift in Sources */,
 				7A8F4AB71D973CD100280A65 /* AppDelegate.swift in Sources */,
