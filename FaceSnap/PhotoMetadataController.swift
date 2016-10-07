@@ -11,7 +11,7 @@ import CoreLocation
 
 class PhotoMetadataController: UITableViewController {
     
-    private let photo: UIImage
+    let photo: UIImage
     
     init(photo: UIImage) {
         self.photo = photo
@@ -151,7 +151,11 @@ extension PhotoMetadataController {
 
 extension PhotoMetadataController {
     func savePhotoWithMetadata() {
+        let tags = tagsFromTextField()
+        Photo.photo(withImage: photo, tags: tags, location: location)
         
+        CoreDataController.save()
+        dismiss(animated: true, completion: nil)
     }
 }
 
