@@ -19,6 +19,10 @@ class SortableDataSource<SortType: CustomTitleConvertible>: NSObject, UITableVie
     
     let fetchedResultsController: NSFetchedResultsController<SortType>
     
+    var results: [SortType] {
+        return fetchedResultsController.fetchedObjects!
+    }
+    
     init(fetchRequest: NSFetchRequest<SortType>, managedObjectContex moc: NSManagedObjectContext) {
         self.fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
         

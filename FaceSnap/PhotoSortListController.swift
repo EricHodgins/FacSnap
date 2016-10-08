@@ -12,12 +12,15 @@ import CoreData
 class PhotoSortListController<SortType: CustomTitleConvertible>: UITableViewController where SortType: NSManagedObject {
     
     let dataSource: SortableDataSource<SortType>
+    let sortItemSelector: SortItemSelector<SortType>
     
-    init(dataSource: SortableDataSource<SortType>) {
+    init(dataSource: SortableDataSource<SortType>, sortItemSelector: SortItemSelector<SortType>) {
         self.dataSource = dataSource
+        self.sortItemSelector = sortItemSelector
         super.init(style: .grouped)
         
         tableView.dataSource = dataSource
+        tableView.delegate = sortItemSelector
     }
     
     required init?(coder aDecoder: NSCoder) {
