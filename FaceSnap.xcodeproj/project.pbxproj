@@ -13,6 +13,7 @@
 		7A8B6D321DA7534900B7080C /* PhotoFetchedResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8B6D311DA7534900B7080C /* PhotoFetchedResultsController.swift */; };
 		7A8B6D341DA756B200B7080C /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8B6D331DA756B200B7080C /* PhotoCell.swift */; };
 		7A8DE1AF1DA8AE3A0004C154 /* PhotoSortListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8DE1AE1DA8AE3A0004C154 /* PhotoSortListController.swift */; };
+		7A8DE1B11DA8AF780004C154 /* SortableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8DE1B01DA8AF780004C154 /* SortableDataSource.swift */; };
 		7A8F4AB71D973CD100280A65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F4AB61D973CD100280A65 /* AppDelegate.swift */; };
 		7A8F4AB91D973CD100280A65 /* PhotoListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F4AB81D973CD100280A65 /* PhotoListController.swift */; };
 		7A8F4ABE1D973CD100280A65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A8F4ABD1D973CD100280A65 /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 		7A8B6D311DA7534900B7080C /* PhotoFetchedResultsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoFetchedResultsController.swift; sourceTree = "<group>"; };
 		7A8B6D331DA756B200B7080C /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		7A8DE1AE1DA8AE3A0004C154 /* PhotoSortListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSortListController.swift; sourceTree = "<group>"; };
+		7A8DE1B01DA8AF780004C154 /* SortableDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortableDataSource.swift; sourceTree = "<group>"; };
 		7A8F4AB31D973CD100280A65 /* FaceSnap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceSnap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A8F4AB61D973CD100280A65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A8F4AB81D973CD100280A65 /* PhotoListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListController.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				7A9F1A8E1DA614D20013B0CC /* Tag.swift */,
 				7A9F1A901DA614E90013B0CC /* Location.swift */,
 				7A8B6D2F1DA7528A00B7080C /* PhotoDataSource.swift */,
+				7A8DE1B01DA8AF780004C154 /* SortableDataSource.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 			files = (
 				7A9F1A8F1DA614D20013B0CC /* Tag.swift in Sources */,
 				7A8B6D301DA7528A00B7080C /* PhotoDataSource.swift in Sources */,
+				7A8DE1B11DA8AF780004C154 /* SortableDataSource.swift in Sources */,
 				7AC3C1D71DA4B4A700049917 /* FaceSnap.xcdatamodeld in Sources */,
 				7A94C1701D9860A60041E7C5 /* FilteredImageBuilder.swift in Sources */,
 				7A8B6D341DA756B200B7080C /* PhotoCell.swift in Sources */,
