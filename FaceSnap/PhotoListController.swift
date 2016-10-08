@@ -110,7 +110,10 @@ extension PhotoListController {
     }
     
     func presentSortController() {
-        
+        let tagDataSource = SortableDataSource<Tag>(fetchRequest: Tag.allTagsRequest, managedObjectContex: CoreDataController.sharedInstance.managedObjectContext)
+        let sortController = PhotoSortListController(dataSource: tagDataSource)
+        let navigtationController = UINavigationController(rootViewController: sortController)
+        present(navigtationController, animated: true, completion: nil)
     }
 }
 

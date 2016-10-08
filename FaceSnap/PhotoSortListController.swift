@@ -7,17 +7,28 @@
 //
 
 import UIKit
+import CoreData
 
-class PhotoSortListController: UITableViewController {
-
+class PhotoSortListController<SortType: CustomTitleConvertible>: UITableViewController where SortType: NSManagedObject {
+    
+    let dataSource: SortableDataSource<SortType>
+    
+    init(dataSource: SortableDataSource<SortType>) {
+        self.dataSource = dataSource
+        super.init(style: .grouped)
+        
+        tableView.dataSource = dataSource
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigation()
     }
-
-}
-
-extension PhotoSortListController {
+    
     func setupNavigation() {
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(PhotoSortListController.dismissPhotoSortListController))
         navigationItem.rightBarButtonItem = doneButton
@@ -26,4 +37,6 @@ extension PhotoSortListController {
     func dismissPhotoSortListController() {
         dismiss(animated: true, completion: nil)
     }
+
 }
+
