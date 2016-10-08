@@ -48,6 +48,7 @@ class PhotoListController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationBar()
         
         collectionView.dataSource = dataSource
         self.automaticallyAdjustsScrollViewInsets = false
@@ -99,7 +100,19 @@ extension PhotoListController: MediaPickerManagerDelegate {
     }
 }
 
+// MARK: - Navigation 
 
+extension PhotoListController {
+    
+    func setupNavigationBar() {
+        let sortTagsButton = UIBarButtonItem(title: "Tags", style: .plain, target: self, action: #selector(PhotoListController.presentSortController))
+        navigationItem.setRightBarButtonItems([sortTagsButton], animated: true)
+    }
+    
+    func presentSortController() {
+        
+    }
+}
 
 
 
