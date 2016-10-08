@@ -11,6 +11,7 @@
 		7A3374E11DA35F770077D3E6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3374E01DA35F770077D3E6 /* LocationManager.swift */; };
 		7A8B6D301DA7528A00B7080C /* PhotoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8B6D2F1DA7528A00B7080C /* PhotoDataSource.swift */; };
 		7A8B6D321DA7534900B7080C /* PhotoFetchedResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8B6D311DA7534900B7080C /* PhotoFetchedResultsController.swift */; };
+		7A8B6D341DA756B200B7080C /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8B6D331DA756B200B7080C /* PhotoCell.swift */; };
 		7A8F4AB71D973CD100280A65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F4AB61D973CD100280A65 /* AppDelegate.swift */; };
 		7A8F4AB91D973CD100280A65 /* PhotoListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F4AB81D973CD100280A65 /* PhotoListController.swift */; };
 		7A8F4ABE1D973CD100280A65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A8F4ABD1D973CD100280A65 /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 		7A3374E01DA35F770077D3E6 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		7A8B6D2F1DA7528A00B7080C /* PhotoDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDataSource.swift; sourceTree = "<group>"; };
 		7A8B6D311DA7534900B7080C /* PhotoFetchedResultsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoFetchedResultsController.swift; sourceTree = "<group>"; };
+		7A8B6D331DA756B200B7080C /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		7A8F4AB31D973CD100280A65 /* FaceSnap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceSnap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A8F4AB61D973CD100280A65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A8F4AB81D973CD100280A65 /* PhotoListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListController.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				7A94C1711D98B7DA0041E7C5 /* FilteredImageCell.swift */,
+				7A8B6D331DA756B200B7080C /* PhotoCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				7A8B6D301DA7528A00B7080C /* PhotoDataSource.swift in Sources */,
 				7AC3C1D71DA4B4A700049917 /* FaceSnap.xcdatamodeld in Sources */,
 				7A94C1701D9860A60041E7C5 /* FilteredImageBuilder.swift in Sources */,
+				7A8B6D341DA756B200B7080C /* PhotoCell.swift in Sources */,
 				7A8F4AD71D97426B00280A65 /* MediaPickerManager.swift in Sources */,
 				7A94C1721D98B7DA0041E7C5 /* FilteredImageCell.swift in Sources */,
 				7A8F4AB91D973CD100280A65 /* PhotoListController.swift in Sources */,

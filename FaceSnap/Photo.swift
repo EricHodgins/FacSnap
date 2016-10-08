@@ -13,6 +13,13 @@ import CoreLocation
 class Photo: NSManagedObject {
     static let entityName = "\(Photo.self)"
     
+    static var allPhotosRequest: NSFetchRequest<Photo> = {
+        let request = NSFetchRequest<Photo>(entityName: Photo.entityName)
+        request.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
+        
+        return request
+    }()
+    
     class func photo(withImage image: UIImage) -> Photo {
         let photo = NSEntityDescription.insertNewObject(forEntityName: Photo.entityName, into: CoreDataController.sharedInstance.managedObjectContext) as! Photo
         
@@ -53,4 +60,8 @@ extension Photo {
     @NSManaged var image: NSData
     @NSManaged var tags: Set<Tag>
     @NSManaged var location: Location?
+    
+    var photoImage: UIImage {
+        return UIImage(data: image as Data)!
+    }
 }
