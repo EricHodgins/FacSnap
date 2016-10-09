@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class PhotoListController: UIViewController {
     
@@ -113,6 +114,25 @@ extension PhotoListController {
         let tagDataSource = SortableDataSource<Tag>(fetchRequest: Tag.allTagsRequest, managedObjectContex: CoreDataController.sharedInstance.managedObjectContext)
         let sortItemSelector = SortItemSelector(sortItems: tagDataSource.results)
         let sortController = PhotoSortListController(dataSource: tagDataSource, sortItemSelector: sortItemSelector)
+        sortController.onSortSelection = { checkedItems in
+            let fetchRequest = NSFetchRequest<Photo>(entityName: Photo.entityName)
+            fetchRequest.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
+            
+            if !checkedItems.isEmpty {
+                var predicates = [NSPredicate]()
+                for tag in checkedItems {
+                    let predicate = NSPredicate(format: "%K CONTAINS %@", "tags.title", tag.title) //photos.tags.title, fetching a Photo.K = keypath
+                    predicates.append(predicate)
+                }
+                
+                // TH has these in the for loop...but I don't think it needs to be there.
+                let compoundPredicate = NSCompoundPredicate(orPredicateWithSubpredicates: predicates)
+                fetchRequest.predicate = compoundPredicate
+            }
+            
+            fetchRequest.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
+        }
+        
         let navigtationController = UINavigationController(rootViewController: sortController)
         present(navigtationController, animated: true, completion: nil)
     }
