@@ -115,8 +115,8 @@ extension PhotoListController {
         let sortItemSelector = SortItemSelector(sortItems: tagDataSource.results)
         let sortController = PhotoSortListController(dataSource: tagDataSource, sortItemSelector: sortItemSelector)
         sortController.onSortSelection = { checkedItems in
-            let fetchRequest = NSFetchRequest<Photo>(entityName: Photo.entityName)
-            fetchRequest.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
+            //let fetchRequest = NSFetchRequest<Photo>(entityName: Photo.entityName)
+            //fetchRequest.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
             
             if !checkedItems.isEmpty {
                 var predicates = [NSPredicate]()
@@ -125,12 +125,15 @@ extension PhotoListController {
                     predicates.append(predicate)
                 }
                 
-                // TH has these in the for loop...but I don't think it needs to be there.
+                // TH has this in the for loop...but I don't think it needs to be there.
                 let compoundPredicate = NSCompoundPredicate(orPredicateWithSubpredicates: predicates)
-                fetchRequest.predicate = compoundPredicate
+                //fetchRequest.predicate = compoundPredicate
+                self.dataSource.performFetch(withPredicate: compoundPredicate)
+            } else {
+                self.dataSource.performFetch(withPredicate: nil)
             }
             
-            fetchRequest.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
+            //fetchRequest.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
         }
         
         let navigtationController = UINavigationController(rootViewController: sortController)
